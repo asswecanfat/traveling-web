@@ -1,0 +1,40 @@
+:root {
+  --nav-height: 44px;
+}
+
+.search-box {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: pink; */
+  height: var(--nav-height);
+}
+
+.search-box>.search {
+  flex: 1;
+  height: 100%;
+  align-self: center;
+  background-color: pink;
+}
+
+.search-box>.user {
+  display: block;
+  width: var(--nav-height);
+  height: var(--nav-height);
+  background-color: aqua;
+  text-align: center;
+  font-size: 12px;
+  color: #2eaae0;
+}
+
+.search-box>.user::before {
+  content: "";
+  display: block;
+  height: 23px;
+  width: 23px;
+  background: url("/images/sprite.png") no-repeat -59px -194px;
+  background-size: 104px auto;
+  margin: 5px auto 0;
+}
