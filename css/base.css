@@ -6,16 +6,34 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?jd59yz');
+  src: url('../fonts/icomoon.eot?jd59yz#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?jd59yz') format('truetype'),
+    url('../fonts/icomoon.woff?jd59yz') format('woff'),
+    url('../fonts/icomoon.svg?jd59yz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
 input {
   outline: none;
+}
+
+li {
+  list-style: none;
 }
 
 a {
   text-decoration: none;
 }
 
-.center {
-  width: 100%;
-  min-width: 320px;
+body {
+  min-width: 280px;
   max-width: 540px;
+  margin: 0 auto;
+  background: #f2f2f2;
 }
