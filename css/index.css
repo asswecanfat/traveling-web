@@ -6,6 +6,9 @@
   --search-mw: 80%;
   --snav-height: 64px;
   --snav-icon-wh: 32px;
+  --gridN-h: 80px;
+  --comment-mlr: 4px;
+  --comment-borderr: 10px;
 }
 
 /* 搜索框开始 */
@@ -97,9 +100,9 @@ background-size: 104px auto; */
   height: var(--snav-height);
   max-width: inherit;
   min-width: inherit;
-  margin: 3px 4px;
+  margin: 3px var(--comment-mlr);
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: var(--comment-borderr);
 }
 
 .snav-box>.snav-items {
@@ -159,3 +162,61 @@ min-width: 3rem; */
 }
 
 /* 短导航栏结束 */
+
+/* 格子导航栏开始 */
+.gridN {
+  min-width: inherit;
+  max-width: inherit;
+  margin: 1px var(--comment-mlr);
+  border-radius: var(--comment-borderr);
+  overflow: hidden;
+  line-height: calc(var(--gridN-h) / 2);
+}
+
+.gridN>.gnav-box {
+  display: flex;
+  height: var(--gridN-h);
+}
+
+.gridN>div:nth-of-type(1) {
+  background: linear-gradient(to right, #ed1c24, #ff9700);
+}
+
+.gridN>div:nth-of-type(2) {
+  margin: 2px 0;
+  background: linear-gradient(to right, #8dc63f, #39b54a);
+}
+
+.gridN>div:nth-of-type(3) {
+  background: linear-gradient(to right, #6739b6, #ec008c);
+}
+
+.gnav-box>div {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.gnav-box a {
+  flex: 1;
+  text-shadow: 1px 1px rgba(255, 255, 255, .2);
+  color: #fff;
+}
+
+.gnav-box>div:not(:nth-last-child(1)) {
+  border-right: 1px solid #fff;
+}
+
+.gnav-box>div:not(:nth-child(1))>a:nth-child(1) {
+  border-bottom: 1px solid #fff;
+}
+
+.gnav-box>.title>a {
+  background: url(../images/hotel.png) no-repeat bottom center;
+  background-size: 121px auto;
+}
+
+/* 格子导航栏结束 */
